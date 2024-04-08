@@ -1,12 +1,28 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-import ArkBar from './src/Components/ArkBar';
-import {Container} from '@shopify/react-native-skia/lib/typescript/src/renderer/Container';
 import Dashboard from './src/View/Dashboard';
+import MyText from './src/Components/MyText';
+
+const data = {
+  email: 'divyanshu@gmail.com',
+};
 
 const App = () => {
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          flexDirection: 'row',
+          marginTop: 10,
+          marginBottom: 20,
+          marginHorizontal: 10,
+          justifyContent: 'space-between',
+        }}>
+        <MyText style={{fontSize: 18}}>Spending Dashboard</MyText>
+        <TouchableOpacity>
+          <MyText style={{fontSize: 18}}>Logout</MyText>
+        </TouchableOpacity>
+      </View>
       <Dashboard />
     </View>
   );

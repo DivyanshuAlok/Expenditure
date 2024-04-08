@@ -53,10 +53,12 @@ const ArkBar = ({amount, limit}) => {
           alignSelf: 'center',
           paddingTop: r / 5,
         }}>
-        <MyText style={{fontSize: 28, fontWeight: 'bold'}}>
+        <MyText style={{fontSize: 30, fontWeight: 'bold'}}>
           {Math.trunc((amount / limit) * 100)}%
         </MyText>
-        <MyText>Total Spendings</MyText>
+        <MyText style={{fontWeight: 'bold', fontSize: 18}}>
+          Total Spendings
+        </MyText>
       </View>
     </View>
   );
